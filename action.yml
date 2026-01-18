@@ -15,7 +15,7 @@ inputs:
     required: true
     default: 'Ericsson/CodeChecker'
   version:
-    description: 'The version of the CodeChecker suite to obtain and execute. Might be a Git commit SHA, a branch name, or a tag if building a custom package, or a release version if downloading from PyPI. If "master" and downloading from PyPI, fetch the latest release.'
+    description: 'The version of the CodeChecker suite to obtain and execute. Might be a Git commit SHA, a branch name, or a tag if building a custom package, or a release version if downloading from PyPI. If "master" and downloading from PyPI, fetch the latest release. If "skip", assume CodeChecker is already installed and available in PATH (useful for Docker containers with pre-installed tools).'
     required: true
     default: 'master'
   llvm-version:

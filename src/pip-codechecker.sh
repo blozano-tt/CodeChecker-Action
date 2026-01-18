@@ -5,11 +5,11 @@ if [[ ! -z "$CODECHECKER_ACTION_DEBUG" ]]; then
 fi
 
 # Check if CodeChecker is already installed and skip installation if requested
-if [[ "$IN_VERSION" == "skip" ]]; then
-  echo "::group::Using pre-installed CodeChecker (skip requested)"
+if [[ "$IN_VERSION" == "ignore" ]]; then
+  echo "::group::Using pre-installed CodeChecker (ignore requested)"
   if ! command -v CodeChecker &> /dev/null; then
-    echo "::error::CodeChecker not found in PATH but version='skip' was specified"
-    echo "Please ensure CodeChecker is installed before running this action with version='skip'"
+    echo "::error::CodeChecker not found in PATH but version='ignore' was specified"
+    echo "Please ensure CodeChecker is installed before running this action with version='ignore'"
     exit 1
   fi
   echo "CodeChecker found at: $(which CodeChecker)"
